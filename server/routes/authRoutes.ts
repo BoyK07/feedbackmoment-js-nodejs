@@ -2,10 +2,9 @@ import express from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import fs from 'fs';
-import { JWT_SECRET } from '../config/constants';
+import { JWT_SECRET, usersDB } from '../config/constants';
 
 const router = express.Router();
-let usersDB = '../database/users.json';
 
 const checkUserFile = () => {
     if (!fs.existsSync(usersDB)) {

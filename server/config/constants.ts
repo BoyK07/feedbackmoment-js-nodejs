@@ -7,3 +7,4 @@ if (!process.env.JWT_SECRET) {
 }
 
 export const JWT_SECRET = process.env.JWT_SECRET;
+export let usersDB = '../database/users.json';
